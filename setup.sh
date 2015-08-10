@@ -8,3 +8,4 @@ cat $DIR/.bash_profile > ~/.bash_profile
 ln -s $DIR/.vim ~/.vim
 ln -s $DIR/.vimrc ~/.vimrc
 
+echo "Don't forget to install ncurses-term"
