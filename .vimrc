@@ -13,32 +13,23 @@ set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitigno
 set history=50
 set number
 set laststatus=2
-
-filetype plugin indent on
-
-" Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
 set shiftround
 set expandtab
-
-" Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
-" Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
-" Index ctags from any project, including those outside Rails
+" Open Ctrl P Menu in mixed mode
+map <Leader><Leader> :CtrlPMixed<CR>
+" Regenerate ctags
 map <Leader>ct :!ctags -R .<CR>
+" Prev/Next Buffer
+map <Leader>bp :bprevious<CR>
+map <Leader>bn :bnext<CR>
+map <Leader>q :bd<CR>
 
-" Switch between the last two files
-nnoremap <leader><leader> <c-^>
-
-" Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
 
 " vim-rspec mappings
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
