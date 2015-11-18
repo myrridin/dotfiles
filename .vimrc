@@ -1,5 +1,7 @@
+set t_Co=256      " 256 Color support
 execute pathogen#infect()
 syntax on
+filetype plugin indent on
 
 " Leader
 let mapleader = " "
@@ -50,3 +52,6 @@ nnoremap <Leader>r :RunInInteractiveShell<space>
 let g:html_indent_tags = 'li\|p'
 
 map <leader>re :w<CR>:!clear<CR>:!elixir %<CR>
+
+" Airline configuration
+let g:airline#extensions#tabline#enabled = 1
