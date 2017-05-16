@@ -1,6 +1,14 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
+# Install git
+sudo apt install git -y
+
+# Configure git
+git config --global core.editor "vim"
+git config --global user.name "Thomas Hart"
+git config --global user.email "myrridin@gmail.com"
+
 # Copy bash_profile contents over
 cat $DIR/.bashrc >> ~/.bashrc
 
