@@ -2,7 +2,7 @@
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 # Copy bash_profile contents over
-cat $DIR/.bash_profile >> ~/.bash_profile
+cat $DIR/.bashrc >> ~/.bashrc
 
 # Set up symbolic links
 ln -s $DIR/.vim ~/.vim
@@ -10,6 +10,7 @@ ln -s $DIR/.vimrc ~/.vimrc
 
 # Install VIM Plugins
 mkdir ~/.vim/bundle
+cd ~/.vim/bundle
 git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/scrooloose/syntastic
 git clone https://github.com/tpope/vim-surround
